@@ -1,4 +1,4 @@
-***KL05 Cuisine Labs - Homemade Meals***
+***KL05 Cuisine Labs***
 Welcome to KL05 Cuisine Labs, a unique culinary experience dedicated to bringing homestyle meals to a close-knit community. Our mission is to craft wholesome, homely dishes with a personal touch that combines traditional flavors with modern twists. Whether you're here to explore new recipes, enjoy a comforting meal, or join our culinary journey, KL05 Cuisine Labs invites you to experience food like never before.
 
 At KL05 Cuisine Labs, we are passionate about creating homely meals that bring comfort and joy. This website serves as a digital space to share our favorite dishes, tell the story behind each recipe, and connect with food lovers. We offer a variety of easy-to-follow recipes, and our goal is to make cooking a fun and fulfilling activity for everyone.
