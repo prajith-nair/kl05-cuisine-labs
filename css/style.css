@@ -1,101 +1,126 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     background-image: url('Background2.png');
-    background-size:cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
-.top{
+
+/* Top Navigation */
+.top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 80px;
-    align-items:center;
-    padding:0px 40px;
+    align-items: center;
+    padding: 0px 40px;
 }
-.logo{
+
+.logo {
     font-size: 30px;
-    color:orange;
+    color: orange;
 }
-.nav{
+
+.nav {
     position: relative;
-    left:-180px;
+    left: -180px;
 }
-a{
-    padding:5px 15px;
-    color:orange;
+
+a {
+    padding: 5px 15px;
+    color: orange;
     font-size: 20px;
-    text-decoration:none;
+    text-decoration: none;
 }
-a:hover{
-    color:white;
+
+a:hover {
+    color: white;
     text-decoration: underline;
-    text-underline-position:under;
+    text-underline-position: under;
 }
-.search{
+
+.search {
     font-size: 25px;
 }
-.search i{
-    padding:5px 20px;
+
+.search i {
+    padding: 5px 20px;
+    color: orange;
 }
-/************heading**************/
-.heading{
+
+/* Heading Section */
+.heading {
     display: flex;
     justify-content: space-evenly;
-    padding-top:65px;
-    align-items:center;
+    padding-top: 65px;
+    align-items: center;
 }
-.right{
+
+.right {
     width: 440px;
     height: 440px;
     background-image: url('food.jpg');
-    background-size:cover;
+    background-size: cover;
+    background-position: center;
     border-radius: 400px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    position: relative;
 }
-.right::before{
+
+.right::before {
     width: 430px;
     height: 430px;
-    border:2px solid white;
+    border: 2px solid white;
     content: '';
     position: absolute;
     border-radius: 430px;
-    padding:10px;
+    padding: 10px;
 }
 
-/**********left************/
-.left p:nth-child(1){
+/* Left Section */
+.left p:nth-child(1) {
     color: white;
     font-size: 30px;
     letter-spacing: 1px;
     font-style: italic;
 }
-.left h1{
+
+.left h1 {
     font-size: 90px;
-    color:white;
+    color: white;
 }
-.left p:nth-child(3){
+
+.left p:nth-child(3) {
     color: orange;
     font-size: 30px;
     font-style: italic;
 }
-.left button{
+
+.left button {
     width: 150px;
     height: 30px;
     font-size: 15px;
     border-radius: 20px;
-    border:2px solid white;
-    background-color:transparent;
-    color:white;
-    margin:20px 0px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin: 20px 0px;
+    cursor: pointer;
 }
-/*********SocialMedia***************/
-.SocialMedia{
+
+/* Social Media */
+.SocialMedia {
     position: absolute;
     right: 0;
     display: flex;
@@ -104,68 +129,47 @@ a:hover{
     flex-direction: column;
     width: 40px;
     height: 200px;
-    background-color:white;
+    background-color: white;
     font-size: 25px;
-
 }
+
 .SocialMedia i:hover {
-    color:orange;
+    color: orange;
 }
 
+/* Bottom Menu Section */
+.bottom {
+    margin-top: 50px;
+}
 
-/***************bottom***************/
-#food1,#food2,#food3,#food4,#food5,#food6,#food7,#food8{
-    background-size:cover;
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 100px;
+    flex-wrap: wrap;
+}
+
+#food1, #food2, #food3, #food4, #food5, #food6, #food7, #food8 {
+    background-size: cover;
+    background-position: center;
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    margin:0px 20px;
-}
-#food1{
-    background-image: url('food1.png');
-}
-#food2{
-    background-image: url('food.jpg');
-}
-#food3{
-    background-image: url('chickenbreadpocket.jpg');
-}
-#food4{
-    background-image: url('chicken.jpg');
-}
-#food5{
-    background-image: url('prawnscurry.jpg');
-}
-#food6{
-    background-image: url('prawnsroast.jpg');
-}
-#food7{
-    background-image: url('soyacurry.jpg');
-}
-#food8{
-    background-image: url('paneertikka.jpeg');
-}
-.menu{
-    display: flex;
-    margin:0px 100px;
-}
-
-/*****************************/
-
-.menu-item {
+    margin: 20px;
     cursor: pointer;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    margin: 10px;
-    text-align: center;
 }
 
-.menu-item:hover {
-    background-color: #ddd;
-}
+#food1 { background-image: url('food1.png'); }
+#food2 { background-image: url('food.jpg'); }
+#food3 { background-image: url('chickenbreadpocket.jpg'); }
+#food4 { background-image: url('chicken.jpg'); }
+#food5 { background-image: url('prawnscurry.jpg'); }
+#food6 { background-image: url('prawnsroast.jpg'); }
+#food7 { background-image: url('soyacurry.jpg'); }
+#food8 { background-image: url('paneertikka.jpeg'); }
 
-/***********************/
+/* Modal Styles */
 .menu-modal {
     display: none;
     position: fixed;
@@ -193,4 +197,107 @@ a:hover{
     right: 20px;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .nav {
+        left: -100px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .heading {
+        padding: 65px 20px;
+    }
+
+    .right {
+        width: 380px;
+        height: 380px;
+    }
+
+    .right::before {
+        width: 370px;
+        height: 370px;
+    }
+
+    .left h1 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: orange;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .heading {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .right::before {
+        width: 290px;
+        height: 290px;
+    }
+
+    .left h1 {
+        font-size: 60px;
+    }
+
+    .menu {
+        margin: 0px 20px;
+    }
+
+    .SocialMedia {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top {
+        padding: 0px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .right {
+        width: 260px;
+        height: 260px;
+    }
+
+    .right::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    .left h1 {
+        font-size: 40px;
+    }
+
+    .left p:nth-child(1),
+    .left p:nth-child(3) {
+        font-size: 24px;
+    }
+
+    #food1, #food2, #food3, #food4, #food5, #food6, #food7, #food8 {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+    }
 }

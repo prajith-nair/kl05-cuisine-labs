@@ -18,7 +18,7 @@
             <a href="contact.html">Contact</a>
         </div>
         <div class="search">
-
+            <i class="fas fa-search"></i>
         </div>
     </div>
 
@@ -26,21 +26,21 @@
         <div class="left">
             <p>Are You Hungry?</p>
             <h1>Don't Wait</h1>
-            <p>Let’s start to order food now</p>
-
+            <p>Let's start to order food now</p>
             <button id="checkMenuBtn">Check out Menu</button>
-	    <script>
-	        document.getElementById('checkMenuBtn').addEventListener('click', () => {
+            <script>
+            document.getElementById('checkMenuBtn').addEventListener('click', () => {
                 // Dynamically redirect to menu.html
                 window.location.href = `${window.location.origin}/menu.html`;
              });
             </script>
         </div>
 
-        <div class="right" id="food" class="food-img">
+        <div class="right" id="food">
             <!-- Food image will be dynamically set here -->
         </div>
     </div>
+
     <div class="bottom">
         <div class="menu">
             <div id="food2" class="menu-item" data-img="css/food.jpg"></div>

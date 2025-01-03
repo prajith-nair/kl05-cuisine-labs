@@ -1,73 +1,96 @@
-// Get references to the elements
-let food1s = document.getElementById('food1');
-let food2s = document.getElementById('food2');
-let food3s = document.getElementById('food3');
-let food4s = document.getElementById('food4');
-let food5s = document.getElementById('food5');
-let food6s = document.getElementById('food6');
-let food7s = document.getElementById('food7');
-let food8s = document.getElementById('food8');
-let foods = document.getElementById('food');
+document.addEventListener('DOMContentLoaded', () => {
+    // Get references to all elements
+    const foodImages = {
+        food1: document.getElementById('food1'),
+        food2: document.getElementById('food2'),
+        food3: document.getElementById('food3'),
+        food4: document.getElementById('food4'),
+        food5: document.getElementById('food5'),
+        food6: document.getElementById('food6'),
+        food7: document.getElementById('food7'),
+        food8: document.getElementById('food8')
+    };
+    
+    const mainFood = document.getElementById('food');
+    const checkMenuBtn = document.getElementById('checkMenuBtn');
+    const menuModal = document.getElementById('menuModal');
+    const closeModal = document.getElementById('closeModal');
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
 
-// Get references to elements
-let checkMenuBtn = document.getElementById('checkMenuBtn');
-let menuModal = document.getElementById('menuModal');
-let closeModal = document.getElementById('closeModal');
+    // Mobile menu toggle
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    }
 
-// Change background images on click of menu items
-food1s.addEventListener('click', () => {
-    let img = food1s.getAttribute('data-img'); // Get the image associated with food1
-    foods.style.backgroundImage = `url('${img}')`;
-});
+    // Add click event listeners to all food images
+    Object.values(foodImages).forEach(foodElement => {
+        if (foodElement) {
+            foodElement.addEventListener('click', () => {
+                const img = foodElement.getAttribute('data-img');
+                if (mainFood && img) {
+                    mainFood.style.backgroundImage = `url('${img}')`;
+                }
+            });
 
-food2s.addEventListener('click', () => {
-    let img = food2s.getAttribute('data-img'); // Get the image associated with food2
-    foods.style.backgroundImage = `url('${img}')`;
-});
+            // Optional: Add hover effect
+            foodElement.addEventListener('mouseenter', () => {
+                const img = foodElement.getAttribute('data-img');
+                if (mainFood && img) {
+                    mainFood.style.backgroundImage = `url('${img}')`;
+                }
+            });
+        }
+    });
 
-food3s.addEventListener('click', () => {
-    let img = food3s.getAttribute('data-img'); // Get the image associated with food3
-    foods.style.backgroundImage = `url('${img}')`;
-});
+    // Menu modal functionality
+    if (checkMenuBtn && menuModal) {
+        checkMenuBtn.addEventListener('click', () => {
+            menuModal.style.display = 'flex';
+        });
+    }
 
-food4s.addEventListener('click', () => {
-    let img = food4s.getAttribute('data-img'); // Get the image associated with food4
-    foods.style.backgroundImage = `url('${img}')`;
-});
+    if (closeModal && menuModal) {
+        // Close modal with close button
+        closeModal.addEventListener('click', () => {
+            menuModal.style.display = 'none';
+        });
 
-food5s.addEventListener('click', () => {
-    let img = food5s.getAttribute('data-img'); // Get the image associated with food5
-    foods.style.backgroundImage = `url('${img}')`;
-});
+        // Close modal when clicking outside
+        menuModal.addEventListener('click', (e) => {
+            if (e.target === menuModal) {
+                menuModal.style.display = 'none';
+            }
+        });
+    }
 
-food6s.addEventListener('click', () => {
-    let img = food6s.getAttribute('data-img'); // Get the image associated with food6
-    foods.style.backgroundImage = `url('${img}')`;
-});
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuModal) {
+            menuModal.style.display = 'none';
+        }
+    });
 
-food7s.addEventListener('click', () => {
-    let img = food7s.getAttribute('data-img'); // Get the image associated with food7
-    foods.style.backgroundImage = `url('${img}')`;
-});
+    // Optional: Add smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
-food8s.addEventListener('click', () => {
-    let img = food8s.getAttribute('data-img'); // Get the image associated with food8
-    foods.style.backgroundImage = `url('${img}')`;
-});
-
-// Show the menu modal when "Check out Menu" button is clicked
-checkMenuBtn.addEventListener('click', () => {
-    menuModal.style.display = 'flex';
-});
-
-// Close the menu modal when the close button is clicked
-closeModal.addEventListener('click', () => {
-    menuModal.style.display = 'none';
-});
-
-// Close the menu modal when clicking outside the content
-menuModal.addEventListener('click', (e) => {
-    if (e.target === menuModal) {
-        menuModal.style.display = 'none';
+    // Optional: Reset main image when mouse leaves all food items
+    const menu = document.querySelector('.menu');
+    if (menu && mainFood) {
+        menu.addEventListener('mouseleave', () => {
+            mainFood.style.backgroundImage = 'url("css/food.jpg")';
+        });
     }
 });
