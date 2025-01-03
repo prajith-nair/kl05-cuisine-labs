@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | KL05 Cuisine Labs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff; /* Light blue background */
+            color: #333333; /* Darker text color for better contrast */
+         }
+
+        .menu-container {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .menu-header {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #d9534f;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-details {
+            padding: 1rem;
+        }
+
+        .menu-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            color: #333;
+        }
+
+        .menu-description {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .menu-price {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            color: #d9534f;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #5bc0de;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #31b0d5;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <button class="back-button" onclick="history.back()">⬅ Go Back</button>
+        <div class="menu-header">Explore Our Delicious Menu</div>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="css/paneertikka.jpeg" alt="Paneer Tikka" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Paneer Tikka</div>
+                    <div class="menu-description">Juicy cubes of paneer marinated in spices and grilled to perfection.</div>
+                    <div class="menu-price">₹250</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/chicken.jpg" alt="Chicken Curry" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Chicken Curry</div>
+                    <div class="menu-description">This authentic Indian chicken curry is cooked in onion, tomato, and cashew-based sauce, flavored with ginger, garlic, and aromatic Indian spices.</div>
+                    <div class="menu-price">₹280</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/prawnscurry.jpg" alt="Prawns Curry" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Prawns Curry</div>
+                    <div class="menu-description">A traditional spicy curry with succulent prawns and rich flavors.</div>
+                    <div class="menu-price">₹350</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/food1.png" alt="Daal Tadka" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Daal Tadka</div>
+                    <div class="menu-description">Dal Tadka is one of the most popular North Indian side dishes made with split lentils, plenty of aromatic spices and herbs..</div>
+                    <div class="menu-price">₹180</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/food.jpg" alt="Paneer Butter Masala" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Paneer Butter Masala</div>
+                    <div class="menu-description">Butter Paneer is a rich & creamy curry made with paneer, spices, onions, tomatoes, cashews and butter.</div>
+                    <div class="menu-price">₹230</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/soyacurry.jpg" alt="Soy Curry" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Soy Curry</div>
+                    <div class="menu-description">A healthy and flavorful curry made with soy chunks and spices.</div>
+                    <div class="menu-price">₹180</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/chickenbreadpocket.jpg" alt="Chicken Bread Pocket" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Chicken Bread Pocket</div>
+                    <div class="menu-description">Delightful chicken-filled bread pockets for a quick snack.</div>
+                    <div class="menu-price">₹40(per peace)</div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="css/prawnsroast.jpg" alt="Prawns Roast" class="menu-img">
+                <div class="menu-details">
+                    <div class="menu-title">Prawns Roast</div>
+                    <div class="menu-description">Prawns-Shrimp is marinated with spices and briefly roasted on the stove; along with onion, green chilies, and curry leaves.</div>
+                    <div class="menu-price">₹380</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
