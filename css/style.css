@@ -150,7 +150,7 @@ a:hover {
     flex-wrap: wrap;
 }
 
-#food1, #food2, #food3, #food4, #food5, #food6, #food7, #food8 {
+#food1, #food2, #food3, #food4, #food5, #food6, #food7, #food8, #food9  {
     background-size: cover;
     background-position: center;
     width: 100px;
@@ -168,6 +168,7 @@ a:hover {
 #food6 { background-image: url('prawnsroast.jpg'); }
 #food7 { background-image: url('soyacurry.jpg'); }
 #food8 { background-image: url('paneertikka.jpeg'); }
+#food9 { background-image: url('jeerarice.jpeg'); }
 
 /* Modal Styles */
 .menu-modal {
@@ -295,7 +296,7 @@ a:hover {
         font-size: 24px;
     }
 
-    #food1, #food2, #food3, #food4, #food5, #food6, #food7, #food8 {
+    #food1, #food2, #food3, #food4, #food5, #food6, #food7, #food8, #food9 {
         width: 80px;
         height: 80px;
         margin: 10px;
