@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         food6: document.getElementById('food6'),
         food7: document.getElementById('food7'),
         food8: document.getElementById('food8'),
-        food9: document.getElementById('food9')
+        food9: document.getElementById('food9'),
+        food10: document.getElementById('food10'),
     };
     
     const mainFood = document.getElementById('food');
