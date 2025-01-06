@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         food5: document.getElementById('food5'),
         food6: document.getElementById('food6'),
         food7: document.getElementById('food7'),
-        food8: document.getElementById('food8')
+        food8: document.getElementById('food8'),
         food9: document.getElementById('food9')
     };
     
