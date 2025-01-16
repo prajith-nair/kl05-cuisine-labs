@@ -16,7 +16,7 @@
 *.dat
 *password*
 *.httr-oauth*
-
+.idea
 .dockerignore
 # Private Node Modules
 node_modules/
