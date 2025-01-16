@@ -21,7 +21,7 @@
 # Private Node Modules
 node_modules/
 creds.js
-
+workspace
 # Private Files
 *.json
 *.csv
